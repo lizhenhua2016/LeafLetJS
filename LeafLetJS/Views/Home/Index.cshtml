@@ -13,19 +13,16 @@
             var map = new window.AMap.Map('map',
                 {
                     resizeEnable: true,
-                    zoom: 16,
+                    zoom: 9,
                     center: [120.106884, 30.217469]
                 });
-            abc();
-        });
+            //var mymaker = L.marker([120, 30]).addTo(map).bindPopup("<b>这里是中国黄山</b>").openPopup();
 
-        function abc() {
-            var map = L.map('map').setView([30, 118], 4);
-            L.tileLayer('http://{s}.mapabc.com/mapabc/maptile?&x={x}&y={y}&z={z}',
+            var mymap = L.map("map",
                 {
-                    subdomains: ["emap1", "emap2", "emap3"]
-                }).addTo(map);
-            var marker = L.marker([30, 118]).addTo(map);
-        }
+                    center: [120.106884, 30.217469],
+                    zoom:15
+                });
+        });
     </script>
 }
