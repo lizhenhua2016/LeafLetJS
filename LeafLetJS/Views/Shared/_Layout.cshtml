@@ -5,17 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/leafletjs")
-    @Scripts.Render("~/bundles/modernizr")
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/leaflet/1.2.0/leaflet.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
+    @RenderSection("Style", required: false)
 </head>
 <body>
+
     @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/leafletjs")
-    @RenderSection("scripts", required: false)
+    @*下面是地图必须的js调用*@
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/leaflet/1.2.0/leaflet.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/leaflet/1.2.0/leaflet-src.js"></script>
+    <script type="text/javascript" src="~/Scripts/leaflet.ChineseTmsProviders.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
